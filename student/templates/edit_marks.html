@@ -1,0 +1,17 @@
+{%extends 'main.html'%}
+{%extends block content%}
+
+<div class="container-fluid">
+    <h2>
+        Edit marks for {{student.name}}({{student.enroll}})
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_P}}
+
+            <button type="submit"  class="btn btn-sucess">Submit</button>
+            <a href="{%url 'detail' student.id%}"><button class="btn btn-warning">Details</button></a>
+        </form>
+    </h2>
+</div>
+
+{%endblock%}

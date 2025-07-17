@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="col">
+        <h2>{{ student.name }}</h2>
+        <p>{{ student.roll }}</p>
+        <p>{{ student.enroll }}</p> 
+        <img src="{{ student.photo.url }}" alt="Student photo"/>
+        {% if student.url %}
+          <a href="{{ student.url }}">{{ student.url }}</a>
+        {% endif %}
+        <p>{{ student.email }}</p>
+        <p>{{ student.desc }}</p>
+        <p>Python: {{ student.Python }}</p>
+        <p>FSD: {{ student.FSD }}</p>
+        <p>TOC: {{ student.TOC }}</p>
+    </div>
+</div>
+
+{% endblock %}
